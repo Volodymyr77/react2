@@ -6,15 +6,16 @@ class Users extends Component {
 
     constructor(props) {
         super(props);
-
     }
 
     render() {
 
+        console.log(this.props, '!!!!')
         let users = this.props.items;
         let oneUserByIdUsers = this.props.getOneUserByIdUsers;
         return (
 
+            <div>
                 {
                     users.map(value =>
                         (<User
@@ -24,10 +25,9 @@ class Users extends Component {
                             />
                         ))
                 }
-
+            </div>
         );
     }
-
 }
 
 export default Users;
